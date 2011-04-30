@@ -6,8 +6,9 @@ Main CSS File for Lead the Way Campaign
 html {font-size:100.1%;}
 body {font-size:75%;color:#000;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;}
 h1, h2, h3, h4, h5, h6 {font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;font-weight:bold;color:#00aeef;text-transform:lowercase;}
-h1{font-size:2.25em;}
-h2{font-size:2em;}
+h2{font-size:2.25em;}
+/* h2{font-size:2em;}
+*/
 h3{font-size:1.75em;}
 h4{font-size:1.5em;}
 h5{font-size:1.25em;}
@@ -90,7 +91,7 @@ background:url(../images/logo.png) no-repeat;text-indent:-9999px;
 .the-blue-list li p{font-size:13pt;color:#000;}
 
 /*Typography*/
-#content h1{padding-left:27px;font-size:30pt;text-transform:lowercase;color:#00aeef;}
+#content h1 #section-header, .documentFirstHeading{padding-left:27px;font-size:30pt;text-transform:lowercase;color:#00aeef;}
 #content h1 #section-header, .documentFirstHeading{padding-bottom:25px;font-size:3.5em;font-family: Arial, Helvetica, sans-serif;font-weight:bold;}
 
 
@@ -116,54 +117,54 @@ background:url(../images/logo.png) no-repeat;text-indent:-9999px;
 .event .location{margin-bottom:10px;}
 
 /** Home Page Styles **/
-#home h1{margin:0px 0px 13px 27px;color:#000;font-family: "Georgia", Times, serif;font-size:16pt;font-weight:normal;text-transform:none;}
+.section-front-page h1{margin:0px 0px 13px 27px;color:#000;font-family: "Georgia", Times, serif;font-size:16pt;font-weight:normal;text-transform:none;}
 
-#home #steps,
-#home #portal-column-two{color:#fff;}
-#home #steps li,
-#home #portal-column-two .portletWrapper{float:left;position:relative;padding:20px 25px;width:178px;height:200px;background:#393636;list-style:none;border-left:2px #ffffff solid;z-index:1;}
-#home #steps li h3,
-#home #portal-column-two .portletWrapper .portletHeader,
-#home #portal-column-two .portletWrapper .portletHeader a{margin-bottom:0px; color:#fff;}
-#home #steps li:first-child,
-#home #portal-column-two .portletWrapper:first-child{border-left:0px #ffffff solid;}
-#home #steps li,
-#home #steps h3,
-#home #portal-column-two .portletWrapper .portletHeader,
-#home #portal-column-two .portletWrapper .portletHeader a
+.section-front-page #steps,
+.section-front-page #portal-column-two{color:#fff;}
+.section-front-page #steps li,
+.section-front-page #portal-column-two .portletWrapper{float:left;position:relative;padding:20px 25px;width:178px;height:200px;background:#393636;list-style:none;border-left:2px #ffffff solid;z-index:1;}
+.section-front-page #steps li h3,
+.section-front-page #portal-column-two .portletWrapper .portletHeader,
+.section-front-page #portal-column-two .portletWrapper .portletHeader a{margin-bottom:0px; color:#fff;}
+.section-front-page #steps li:first-child,
+.section-front-page #portal-column-two .portletWrapper:first-child{border-left:0px #ffffff solid;}
+.section-front-page #steps li,
+.section-front-page #steps h3,
+.section-front-page #portal-column-two .portletWrapper .portletHeader,
+.section-front-page #portal-column-two .portletWrapper .portletHeader a
 {font-size:20pt;font-weight:bold;}
-#home #steps li p,
-#home #portal-column-two .portletWrapper .portletItem{font-family: "Georgia", Times, serif;font-weight:normal;font-size:10pt;color:#fff;}
+.section-front-page #steps li p,
+.section-front-page #portal-column-two .portletWrapper .portletItem{font-family: "Georgia", Times, serif;font-weight:normal;font-size:10pt;color:#fff;}
 
-#home #steps li .button1,
-#home #steps li .button2,
-#home #portal-column-two .portletWrapper .portletFooter{position:absolute;bottom:0;margin:0px;height:10px;padding-top:10px;line-height:0px;}
+.section-front-page #steps li .button1,
+.section-front-page #steps li .button2,
+.section-front-page #portal-column-two .portletWrapper .portletFooter{position:absolute;bottom:0;margin:0px;height:10px;padding-top:10px;line-height:0px;}
 
-#home #steps li .button1 span,
-#home #steps li .button2 span,
-#home #portal-column-two .portletWrapper .portletFooter a{padding-top:0px;padding-right:30px;font-size:10pt;font-weight:bold;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;background:url(../images/mini-arrow.png) 95% 0px no-repeat;}
+.section-front-page #steps li .button1 span,
+.section-front-page #steps li .button2 span,
+.section-front-page #portal-column-two .portletWrapper .portletFooter a{padding-top:0px;padding-right:30px;font-size:10pt;font-weight:bold;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;background:url(../images/mini-arrow.png) 95% 0px no-repeat;}
 
-#home #steps li .button1,
-#home #portal-column-two .portletWrapper .portletFooter{float:left;width:230px; margin-left:-23px;text-align:right;text-transform:lowercase;background:url(../images/step-footer1.png) no-repeat;}
+.section-front-page #steps li .button1,
+.section-front-page #portal-column-two .portletWrapper .portletFooter{float:left;width:230px; margin-left:-23px;text-align:right;text-transform:lowercase;background:url(../images/step-footer1.png) no-repeat;}
 
-#home #steps li .button1 span,
-#home #portal-column-two .portletWrapper .portletFooter a{margin-right:5px;}
+.section-front-page #steps li .button1 span,
+.section-front-page #portal-column-two .portletWrapper .portletFooter a{margin-right:5px;}
 
-#home #steps li .button2,
-#home #portal-column-two .portletWrapper:last-child .portletFooter{float:right;width:230px; margin-left:-25px;text-align:right;background:url(../images/step-footer2.png) no-repeat;}
+.section-front-page #steps li .button2,
+.section-front-page #portal-column-two .portletWrapper:last-child .portletFooter{float:right;width:230px; margin-left:-25px;text-align:right;background:url(../images/step-footer2.png) no-repeat;}
 
-#home #steps li .button2 span,
-#home #portal-column-two .portletWrapper:last-child .portletFooter a{margin-right:40px;}
+.section-front-page #steps li .button2 span,
+.section-front-page #portal-column-two .portletWrapper:last-child .portletFooter a{margin-right:40px;}
 
 .social-links{margin-top:20px;}
 
 .social-links .line-white{display:block; float:left; height:40px; width:1px;margin:00px 10px 0px 10px; background:#fff;}
 
-#home #footer{position:relative;top:-50px;margin-top:-100px;}
+.section-front-page #footer{position:relative;top:-50px;margin-top:-100px;}
 
-#home #footer a{display:block;float:left;margin:140px 30px 0px 30px;}
+.section-front-page #footer a{display:block;float:left;margin:140px 30px 0px 30px;}
 
-#home #footer .media-kit{float:left;width:296px;margin-left:0px;padding:10px 0px 10px 30px;background-position:0px 0px;text-align:left;}
+.section-front-page #footer .media-kit{float:left;width:296px;margin-left:0px;padding:10px 0px 10px 30px;background-position:0px 0px;text-align:left;}
 
 /*Leaders Page Styles*/
 

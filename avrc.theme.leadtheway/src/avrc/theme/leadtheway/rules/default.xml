@@ -15,15 +15,15 @@
     
     <!-- Make sure plonish styles are in place -->
     <prepend theme="/html" content="/html/@class" />
-
-    <!-- Now for the content -->
+    <prepend content="/html/body/@class" theme="/html/body"  />    
+    <prepend theme="/html/body" content="/html/body/@id" />
+ 
+         <!-- Now for the content -->
     <!-- Replace the logo with plone's -->
    
     <replace css:theme="a.logo" css:content="#portal-logo" />
 
     <replace css:theme="#nav" css:content="#portal-globalnav" />
-    <prepend css:theme="" content="/html/@class" />
-    
     <!-- Popout manifesto -->
     
     <copy css:content="div#portal-column-one div dl.portlet.portlet-static-lead-the-way dt.portletHeader span" css:theme="#manifesto-title"/>
@@ -31,8 +31,11 @@
     <copy css:content="div#portal-column-one div dl.portlet.portlet-static-lead-the-way dd.portletItem p" css:theme="#manifesto-content"/>
     
     <copy css:content="div#portal-column-one div dl.portlet.portlet-static-lead-the-way dd.portletFooter span" css:theme="#manifesto-schedule"/>
-    
+<!--    
     <replace css:content="#content h1.documentFirstHeading" css:theme="#main-content h2"/>
+-->
+    <copy css:content="#portal-column-content" css:theme="#main-content" />
+    
 <!--
     <replace css:theme="#steps" css:content="#portal-column-two"/>
 -->

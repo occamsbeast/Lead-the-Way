@@ -15,6 +15,7 @@
     
     <!-- Make sure plonish styles are in place -->
     <prepend theme="/html" content="/html/@class" />
+    <prepend theme="/html/body" content="/html/body/@class" />
 
     <!-- Now for the content -->
     <!-- Replace the logo with plone's -->
