@@ -31,8 +31,9 @@
     <copy css:content="div#portal-column-one div dl.portlet.portlet-static-lead-the-way dd.portletItem p" css:theme="#manifesto-content"/>
     
     <copy css:content="div#portal-column-one div dl.portlet.portlet-static-lead-the-way dd.portletFooter span" css:theme="#manifesto-schedule"/>
-
+<!--
     <copy content="//*[@id='content']/h1/" css:theme="#main-content h2"/>
+-->
 <!-- 
 
   <drop theme="//*[@lang='en']" if-content="/html[@lang!='en']" />;
