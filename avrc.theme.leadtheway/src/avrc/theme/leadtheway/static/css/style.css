@@ -47,7 +47,7 @@ background:url(../images/logo.png) no-repeat;text-indent:-9999px;
 /* Header: Navigation */
 #portal-globalnav{position:absolute;top:0px;background:url(../images/nav-bg.png);width:200px;margin-left:60px;padding:190px 0px 20px 20px;z-index:1000;}
 #portal-globalnav li{list-style:none;padding-bottom:5px;}
-#portal-globalnav li a{display:block;width:180px;height:23px;padding:5px 0px 0px 20px;text-transform:uppercase;font-weight:bold;color:#000;font-size:1.05em;}
+#portal-globalnav li a{display:block;width:180px;height:23px;padding:5px 0px 0px 20px;text-transform:uppercase;font-weight:bold;color:#000;font-size:1.05em;background-color:transparent; border-right:none}
 #portal-globalnav li a:hover,#portal-globalnav li a.highlight {background:#00aeef;}
 #manifesto-popup{position:absolute; top:190px;left:300px;width:500px;padding:25px;background:url(../images/blue-transparent.png);z-index:999999;}
 /* used to be left:620 */
@@ -147,6 +147,7 @@ background:url(../images/logo.png) no-repeat;text-indent:-9999px;
 
 .black{color:#000;}
 .white{color:#fff;}
+.white a{color:#fff;}
 .green{color:#60bb46;}
 .width-150{width:150px;margin-right:25px;}
 .thirds{float:left; width:250px; margin:0px 15px 15px 0px;}
