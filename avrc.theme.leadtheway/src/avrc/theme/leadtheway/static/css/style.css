@@ -116,23 +116,53 @@ background:url(../images/logo.png) no-repeat;text-indent:-9999px;
 .event .location{margin-bottom:10px;}
 
 /** Home Page Styles **/
-#home h2{margin:0px 0px 13px 27px;color:#000;font-family: "Georgia", Times, serif;font-size:16pt;font-weight:normal;text-transform:none;}
-#home #steps{color:#fff;}
-#home #steps li{float:left;position:relative;padding:20px 25px;width:178px;height:200px;background:#393636;list-style:none;border-left:2px #ffffff solid;z-index:1;}
-#home #steps li h3{margin-bottom:0px; color:#fff;}
-#home #steps li:first-child{border-left:0px #ffffff solid;}
-#home #steps li,#home #steps h3{font-size:20pt;font-weight:bold;}
-#home #steps li p{font-family: "Georgia", Times, serif;font-weight:normal;font-size:10pt;color:#fff;}
-#home #steps li .button1,#home #steps li .button2{position:absolute;bottom:0;margin:0px;height:10px;padding-top:10px;line-height:0px;}
-#home #steps li .button1 span,#home #steps li .button2 span{padding-top:0px;padding-right:30px;font-size:10pt;font-weight:bold;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;background:url(../images/mini-arrow.png) 95% 0px no-repeat;}
-#home #steps li .button1{float:left;width:230px; margin-left:-23px;text-align:right;text-transform:lowercase;background:url(../images/step-footer1.png) no-repeat;}
-#home #steps li .button2{float:right;width:230px; margin-left:-25px;text-align:right;background:url(../images/step-footer2.png) no-repeat;}
-#home #steps li .button1 span{margin-right:5px;}
-#home #steps li .button2 span{margin-right:40px;}
-#home #steps .social-links{margin-top:20px;}
-#home #steps .social-links .line-white{display:block; float:left; height:40px; width:1px;margin:00px 10px 0px 10px; background:#fff;}
+#home h1{margin:0px 0px 13px 27px;color:#000;font-family: "Georgia", Times, serif;font-size:16pt;font-weight:normal;text-transform:none;}
+
+#home #steps,
+#home #portal-column-two{color:#fff;}
+#home #steps li,
+#home #portal-column-two .portletWrapper{float:left;position:relative;padding:20px 25px;width:178px;height:200px;background:#393636;list-style:none;border-left:2px #ffffff solid;z-index:1;}
+#home #steps li h3,
+#home #portal-column-two .portletWrapper .portletHeader,
+#home #portal-column-two .portletWrapper .portletHeader a{margin-bottom:0px; color:#fff;}
+#home #steps li:first-child,
+#home #portal-column-two .portletWrapper:first-child{border-left:0px #ffffff solid;}
+#home #steps li,
+#home #steps h3,
+#home #portal-column-two .portletWrapper .portletHeader,
+#home #portal-column-two .portletWrapper .portletHeader a
+{font-size:20pt;font-weight:bold;}
+#home #steps li p,
+#home #portal-column-two .portletWrapper .portletItem{font-family: "Georgia", Times, serif;font-weight:normal;font-size:10pt;color:#fff;}
+
+#home #steps li .button1,
+#home #steps li .button2,
+#home #portal-column-two .portletWrapper .portletFooter{position:absolute;bottom:0;margin:0px;height:10px;padding-top:10px;line-height:0px;}
+
+#home #steps li .button1 span,
+#home #steps li .button2 span,
+#home #portal-column-two .portletWrapper .portletFooter a{padding-top:0px;padding-right:30px;font-size:10pt;font-weight:bold;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;background:url(../images/mini-arrow.png) 95% 0px no-repeat;}
+
+#home #steps li .button1,
+#home #portal-column-two .portletWrapper .portletFooter{float:left;width:230px; margin-left:-23px;text-align:right;text-transform:lowercase;background:url(../images/step-footer1.png) no-repeat;}
+
+#home #steps li .button1 span,
+#home #portal-column-two .portletWrapper .portletFooter a{margin-right:5px;}
+
+#home #steps li .button2,
+#home #portal-column-two .portletWrapper:last-child .portletFooter{float:right;width:230px; margin-left:-25px;text-align:right;background:url(../images/step-footer2.png) no-repeat;}
+
+#home #steps li .button2 span,
+#home #portal-column-two .portletWrapper:last-child .portletFooter a{margin-right:40px;}
+
+.social-links{margin-top:20px;}
+
+.social-links .line-white{display:block; float:left; height:40px; width:1px;margin:00px 10px 0px 10px; background:#fff;}
+
 #home #footer{position:relative;top:-50px;margin-top:-100px;}
+
 #home #footer a{display:block;float:left;margin:140px 30px 0px 30px;}
+
 #home #footer .media-kit{float:left;width:296px;margin-left:0px;padding:10px 0px 10px 30px;background-position:0px 0px;text-align:left;}
 
 /*Leaders Page Styles*/
