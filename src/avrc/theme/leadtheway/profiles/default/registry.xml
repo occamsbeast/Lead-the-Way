@@ -1,0 +1,14 @@
+<registry>
+
+    <!-- collective.xdv settings -->
+    <record interface="collective.xdv.interfaces.ITransformSettings" field="rules">
+        <value>python://avrc.theme.leadtheway/rules/home.xml</value>
+    </record>
+
+    <record interface="collective.xdv.interfaces.ITransformSettings" field="theme">
+        <value>python://avrc.theme.leadtheway/themes/home.html</value>
+    </record>
+    <record interface="collective.xdv.interfaces.ITransformSettings" field="absolute_prefix">
+        <value>/++resource++avrc.theme.leadtheway.static</value>
+    </record>
+</registry>

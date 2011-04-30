@@ -1,0 +1,166 @@
+/* -----------------------------------------------------------------------
+
+Main CSS File for Lead the Way Campaign
+
+----------------------------------------------------------------------- */
+html {font-size:100.1%;}
+body {font-size:75%;color:#000;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;}
+h1, h2, h3, h4, h5, h6 {font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;font-weight:bold;color:#00aeef;text-transform:lowercase;}
+h1{font-size:2.25em;}
+h2{font-size:2em;}
+h3{font-size:1.75em;}
+h4{font-size:1.5em;}
+h5{font-size:1.25em;}
+h6{font-size:1.1em;}
+a{color:#00aeef;text-decoration:none;}
+a img {border:none;}
+p{font-family: "Georgia", Times, serif;font-weight:normal;line-height:1.5em;padding-bottom:15px;}
+p img.top {margin-top:0;}
+em {font-style:italic;}
+
+#container {background:none;width:980px;margin:0px auto;}
+
+/*** Header ***/
+#header{margin-bottom:30px;}
+#header #portal-logo{position:absolute;top:0px; width:145px;height:120px;margin:30px 0px 40px 95px; z-index:9999; }
+/* used to be # logo with
+background:url(../images/logo.png) no-repeat;text-indent:-9999px;
+*/
+
+/* Header: Slideshow */
+#header #slideshow{width:980px;height:455px;}
+#header ul{list-style:none;}
+
+/* Header: Caption */
+#header .caption{margin-top:-5px;height:60px;background:#393636;z-index:99999;}
+#header .caption div {float:left;}
+#header .caption .would-you {border-right:2px #fff solid;}
+#header .caption .would-you h3{float:left;width:490px;height:60px;background-image:url(../images/wouldyou.png);text-indent:-9999px;}
+#header .caption .would-you h3.he-would{background-position:0px 0px;}
+#header .caption .would-you h3.she-would{background-position:0px -64px;}
+#header .caption .would-you h3.they-would{background-position:0px -128px;}
+#header .caption .leader-select{position:relative;width:485px;height:60px;background:url(../images/leader-select-bg.png) no-repeat;}
+#header .caption .leader-select .info {float:left;width:310px;margin:15px 0px 0px 70px;line-height:1.25em;}
+#header .caption .leader-select .zipcode{float:left;margin:15px 00px 0px 0px;line-height:1.25em;color:#bcbbbb;}
+#header .caption .leader-select .highlight{color:#000;}
+
+/* Header: Navigation */
+#portal-globalnav{position:absolute;top:0px;background:url(../images/nav-bg.png);width:200px;margin-left:60px;padding:190px 0px 20px 20px;z-index:1000;}
+#portal-globalnav li{list-style:none;padding-bottom:5px;}
+#portal-globalnav li a{display:block;width:180px;height:23px;padding:5px 0px 0px 20px;text-transform:uppercase;font-weight:bold;color:#000;font-size:1.05em;}
+#portal-globalnav li a:hover,#portal-globalnav li a.highlight {background:#00aeef;}
+#manifesto-popup{position:absolute; top:190px;left:300px;width:500px;padding:25px;background:url(../images/blue-transparent.png);z-index:999999;}
+/* used to be left:620 */
+#manifesto-popup h4{text-transform:none;}
+#manifesto-popup p{font-size:1.15em;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;}
+.manifesto-tab{position:absolute;left:-24px;top:0px;height:50px; width:25px;background:url(../images/dog-ear.png) no-repeat;}
+.manifesto-schedule{display:block; margin-left:285px;width:220px; height:35px; padding:5px 0px 0px 20px;background:url(../images/manifesto-arrow.png)  no-repeat;font-size:13pt;font-weight:bold;}
+.manifesto-close{float:right;color:#fff;padding:5px;}
+
+/* Content */
+#main-content{padding:0px 30px;}
+#main-content #content{overflow: hidden;width:100%;}
+#main-content #content div{float:left; width:435px;font-family:"Georgia",Times,serif;font-size:1.3em;}
+#main-content #content {width:415px;padding:0px 20px 0px 27px;}
+#main-content #content .col-b{width:385px;margin-top:-40px;padding-left:50px;}
+
+/* Content: Grey Box */
+#main-content .grey-box{width:795px;overflow:hidden;margin:20px auto;padding:30px 0px 30px 115px;background-image:url(../images/big-white.png);background-repeat:no-repeat; background-position: 30px 18px;background-color:#F2F2F2;}
+#main-content .grey-box p{font-size:1.25em;}
+#main-content .grey-box h3{margin-bottom:25px;font-size:2.25em;color:#000;}
+#main-content .grey-box h4{text-transform:none;}
+#main-content .grey-box .two-columns li{width:100%; overflow:auto; margin-bottom:20px;list-style:none;}
+#main-content .grey-box .two-columns li div{float:left;width:260px;}
+#main-content .grey-box .two-columns li div.white-box{width:480px;}
+#main-content .white-box{padding:15px 0px 15px 15px;background-color:#fff;}
+
+
+/* Content: Resources */
+.resources{padding:30px 0px 30px 120px;background-image:url(../images/big-grey.png);background-repeat:no-repeat; background-position: 30px 18px;}
+.resources ul{width:100%;overflow:hidden;list-style:none;}
+.resources h3{margin-bottom:25px;font-size:2.25em;color:#000;}
+.resources li{margin:0px 15px 15px 0px;}
+.resources li a{font-size:1.25em;font-weight:bold;}
+
+/* Content: Blue List - List with big blue arrows */
+.the-blue-list{margin-top:25px;padding:0px;list-style-position:inside;}
+.the-blue-list li,.the-blue-list li h3{font-size:20pt;font-family: "Georgia", Times, serif;color:#00aeef;font-weight:bold;}
+.the-blue-list li{padding:25px 70px 10px 120px;background:url(../images/big-blue.png) 30px 10px no-repeat;border-top:1px solid #231F20;}
+.the-blue-list h3{display:inline;} /*For Firefox and IE */
+.the-blue-list li p{font-size:13pt;color:#000;}
+
+/*Typography*/
+#content h1{padding-left:27px;font-size:30pt;text-transform:lowercase;color:#00aeef;}
+#content h1 #section-header, .documentFirstHeading{padding-bottom:25px;font-size:3.5em;font-family: Arial, Helvetica, sans-serif;font-weight:bold;}
+
+
+/*** Footer ***/
+#footer {width:910px; margin: 0px auto;}
+#footer a{display:block;float:left;margin:50px 10px 0px 10px;}
+#footer .social-links{float:right;margin-top:5px;}
+#footer .social-links .line-black{display:block; float:left; height:40px; width:1px;margin:50px 5px 0px 5px; background:#000;}
+#footer .media-kit{display:block;float:right;width:280px;height:55px;margin-right:0px;padding: 10px 40px 10px 0px;background-image:url(../images/media-but.png);background-position:0px -75px;font-size:2em;color:#000;font-weight:bold;text-align:right;text-transform:lowercase;}
+#footer #bar{clear:both;height:22px;padding:0px 25px;background:#393636;}
+#footer #bar a{color:#fff; margin:0px !important;padding-right:20px;}
+
+/* Social Links */
+.social-links a{display:block;float:left;width:27px;height:25px;padding:10px 0px;background-image:url(../images/social-icons.png);background-repeat:no-repeat; text-indent:-9999px;}
+.social-links .twitter{background-position:0px 7px;margin-left:0px;}
+.social-links .facebook{background-position:-26px 7px;}
+.social-links .email{background-position:-52px 7px;}
+
+/*Events */
+.event p{padding:0px;}
+.event .name{}
+.event .date{font-weight:bold;}
+.event .location{margin-bottom:10px;}
+
+/** Home Page Styles **/
+#home h2{margin:0px 0px 13px 27px;color:#000;font-family: "Georgia", Times, serif;font-size:16pt;font-weight:normal;text-transform:none;}
+#home #steps{color:#fff;}
+#home #steps li{float:left;position:relative;padding:20px 25px;width:178px;height:200px;background:#393636;list-style:none;border-left:2px #ffffff solid;z-index:1;}
+#home #steps li h3{margin-bottom:0px; color:#fff;}
+#home #steps li:first-child{border-left:0px #ffffff solid;}
+#home #steps li,#home #steps h3{font-size:20pt;font-weight:bold;}
+#home #steps li p{font-family: "Georgia", Times, serif;font-weight:normal;font-size:10pt;color:#fff;}
+#home #steps li .button1,#home #steps li .button2{position:absolute;bottom:0;margin:0px;height:10px;padding-top:10px;line-height:0px;}
+#home #steps li .button1 span,#home #steps li .button2 span{padding-top:0px;padding-right:30px;font-size:10pt;font-weight:bold;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;background:url(../images/mini-arrow.png) 95% 0px no-repeat;}
+#home #steps li .button1{float:left;width:230px; margin-left:-23px;text-align:right;text-transform:lowercase;background:url(../images/step-footer1.png) no-repeat;}
+#home #steps li .button2{float:right;width:230px; margin-left:-25px;text-align:right;background:url(../images/step-footer2.png) no-repeat;}
+#home #steps li .button1 span{margin-right:5px;}
+#home #steps li .button2 span{margin-right:40px;}
+#home #steps .social-links{margin-top:20px;}
+#home #steps .social-links .line-white{display:block; float:left; height:40px; width:1px;margin:00px 10px 0px 10px; background:#fff;}
+#home #footer{position:relative;top:-50px;margin-top:-100px;}
+#home #footer a{display:block;float:left;margin:140px 30px 0px 30px;}
+#home #footer .media-kit{float:left;width:296px;margin-left:0px;padding:10px 0px 10px 30px;background-position:0px 0px;text-align:left;}
+
+/*Leaders Page Styles*/
+
+
+
+/***Misc***/
+.left{float:left;}
+.right{float:right;}
+.center{text-align:center;}
+.clear{clear:both;}
+
+.black{color:#000;}
+.white{color:#fff;}
+.green{color:#60bb46;}
+.width-150{width:150px;margin-right:25px;}
+.thirds{float:left; width:250px; margin:0px 15px 15px 0px;}
+
+/*More Window (fancy box window for events)*/
+.more-window{width:500px;padding:15px 10px;font-size:1.25em;}
+
+/*Meet the Team and Schedule Appt Buttons*/
+.meet-button, .schedule-button{float:left;position:relative;width:400px;height:186px;margin-bottom:15px;}
+.meet-button h3, .schedule-button h3{width:250px;padding:25px 40px; font-size:26pt;color:#000; line-height:1.25em; text-transform:lowercase;}
+.meet-button .go, .schedule-button .go{position:absolute; bottom:0px; right:50px;font-size:1.25em; font-weight:bold; color:#60bb46;text-transform:lowercase;}
+
+.schedule-button{background:url(../images/green-box.png) no-repeat;}
+.schedule-button .go{color:#60bb46;}
+
+.meet-button{width:490px;margin:0px 20px 0px 5px;background:url(../images/blue-box.png) no-repeat;}
+.meet-button .go{color:#01aef0;}

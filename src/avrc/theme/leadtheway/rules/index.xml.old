@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://namespaces.plone.org/xdv" xmlns:css="http://namespaces.plone.org/xdv+css">
+  <!-- Add in the Plone-created CSS and JS in addition to the static ones -->
+  <!-- Copy over the id/class attributes on the body tag, this is important
+	     for Kupu and per-section styling -->
+  <!--
+   <prepend theme="/html/body" content="/html/body/@class" />
+   <prepend theme="/html/body" content="/html/body/@id" />
+   <copy css:content='#portal-column-one .navTreeLevel0 > *'   css:theme='#nav-main > ul' />
+   <drop css:content='a.navTreeFolderish > img' />
+   <append css:content=".managePortletsLink" css:theme="#nav-main" />
+   <copy css:content='#portal-column-content' css:theme='.content' />
+   <copy css:theme=".sidebar" css:content="#portal-column-two > *" />
+   <replace css:content='#portal-globalnav' theme='//*[@class="footer footer-font"]/p[1]' />
+   <before  theme="//*[@class='footer footer-font']/p[2]" css:content="dl#portal-personaltools" />
+   <copy css:content='#portal-siteactions'  css:theme='.nav-global>*' />
+
+  <replace content="/html/head/title" theme="/html/head/title"/>
+  <replace content="/html/head/base" theme="/html/head/base"/>
+  <drop theme="/html/head/link"/>
+  <drop theme="/html/head/script"/>
+  <append content="/html/head/script" theme="/html/head"/>
+  <append content="/html/head/link | /html/head/style" theme="/html/head"/>
+  <append content="/html/head/meta" theme="/html/head"/>
+
+
+  <replace content='//*[@id="portletwrapper-706c6f6e652e7269676874636f6c756d6e0a636f6e746578740a2f4561726c79546573740a7361792d6869"]' css:theme="#yo"/>
+  <replace content='//*[@id="portletwrapper-706c6f6e652e7269676874636f6c756d6e0a636f6e746578740a2f4561726c79546573740a74656c6c2d6f7468657273"]' css:theme="#yo"/>
+  <replace content='//*[@id="portletwrapper-706c6f6e652e7269676874636f6c756d6e0a636f6e746578740a2f4561726c79546573740a6c6561726e2d6d6f7265"]' css:theme="#yo"/>
+
+  <append content="/html/head/link | /html/head/style" theme="/html/head"/>
+  <append content="/html/head/script" theme="/html/head"/>
+
+  <replace content="//*[@id=&quot;portal-column-two&quot;]/div[1]/div[1]/p" css:theme="#stop-by-text"/>
+  <replace content="//*[@id=&quot;portal-column-two&quot;]/div[2]/div[1]/p" css:theme="#say-hi-text"/>
+  <replace content="//*[@id=&quot;portal-column-two&quot;]/div[3]/div[1]/p" css:theme="#tell-others-text"/>
+  <replace content="//*[@id=&quot;portal-column-two&quot;]/div[4]/div[1]/p" css:theme="#learn-more-text"/>
+
+-->
+
+  <append content="/html/head/meta" theme="/html/head"/>
+  <prepend theme="/html" content="/html/@class" />
+  <replace content="/html/head/title" theme="/html/head/title"/>
+
+  <drop theme="//*[@lang='en']" if-content="/html[@lang!='en']" />;
+  <drop theme="//*[@lang='es']" if-content="/html[@lang!='es']" />;
+
+  <replace content="//*[@id=&quot;portal-column-two&quot;]/div[9]/div[1]/" css:theme="#content h2"/>
+
+
+  <replace content="//*[@id=&quot;portal-column-two&quot;]/div[1]/div[1]/p" css:theme="#stop-by-text" if-content="/html[@lang='en']"/>
+  <replace content="//*[@id=&quot;portal-column-two&quot;]/div[2]/div[1]/p" css:theme="#say-hi-text" if-content="/html[@lang='en']"/>
+  <replace content="//*[@id=&quot;portal-column-two&quot;]/div[3]/div[1]/p" css:theme="#tell-others-text" if-content="/html[@lang='en']"/>
+  <replace content="//*[@id=&quot;portal-column-two&quot;]/div[4]/div[1]/p" css:theme="#learn-more-text" if-content="/html[@lang='en']"/>
+
+  <replace content="//*[@id=&quot;portal-column-two&quot;]/div[5]/div[1]/p" css:theme="#stop-by-text" if-content="/html[@lang='es']" />
+  <replace content="//*[@id=&quot;portal-column-two&quot;]/div[6]/div[1]/p" css:theme="#say-hi-text" if-content="/html[@lang='es']"/>
+  <replace content="//*[@id=&quot;portal-column-two&quot;]/div[7]/div[1]/p" css:theme="#tell-others-text" if-content="/html[@lang='es']"/>
+  <replace content="//*[@id=&quot;portal-column-two&quot;]/div[8]/div[1]/p" css:theme="#learn-more-text" if-content="/html[@lang='es']"/>
+
+  <replace css:content="#portal-siteactions" css:theme="#bar-list"/>
+</rules>
