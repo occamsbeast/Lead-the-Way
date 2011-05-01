@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rules xmlns="http://namespaces.plone.org/xdv" xmlns:css="http://namespaces.plone.org/xdv+css">
+<theme href="../themes/home.html" />
+
+<theme href="../themes/collection.html" css:if-content="body.portaltype-topic"/>
+
   <!-- Add in the Plone-created CSS and JS in addition to the static ones -->
   <!-- Copy over the id/class attributes on the body tag, this is important
 	     for Kupu and per-section styling -->
@@ -34,8 +38,16 @@
 <!--    
     <replace css:content="#content h1.documentFirstHeading" css:theme="#main-content h2"/>
 -->
-    <copy css:content="#portal-column-content" css:theme="#main-content" />
-    
+    <rules if-content="not(//body[contains(concat(' ', normalize-space(@class), ' '), ' portaltype-topic')])">
+        <copy css:content="#portal-column-content" css:theme="#main-content"  />
+    </rules>
+
+    <rules if-content="//body[contains(concat(' ', normalize-space(@class), ' '), ' portaltype-topic')]">
+        <replace css:content="#content h1.documentFirstHeading" css:theme="#main-content h2"/>
+        
+        <replace css:content="#parent-fieldname-text" css:theme="#main-content .col-a"/>
+        
+    </rules>
 <!--
     <replace css:theme="#steps" css:content="#portal-column-two"/>
 -->
