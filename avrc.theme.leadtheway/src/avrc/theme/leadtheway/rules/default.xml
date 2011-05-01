@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rules xmlns="http://namespaces.plone.org/xdv" xmlns:css="http://namespaces.plone.org/xdv+css">
-<theme href="../themes/home.html" />
-
+<theme href="../themes/collection.html" />
+<!--
 <theme href="../themes/collection.html" css:if-content="body.portaltype-topic"/>
-
+-->
   <!-- Add in the Plone-created CSS and JS in addition to the static ones -->
   <!-- Copy over the id/class attributes on the body tag, this is important
 	     for Kupu and per-section styling -->
@@ -35,19 +35,36 @@
     <copy css:content="div#portal-column-one div dl.portlet.portlet-static-lead-the-way dd.portletItem p" css:theme="#manifesto-content"/>
     
     <copy css:content="div#portal-column-one div dl.portlet.portlet-static-lead-the-way dd.portletFooter span" css:theme="#manifesto-schedule"/>
+
+     <replace css:content="#content h1.documentFirstHeading" css:theme="#main-content h2"/>
+
+    <copy css:content="#portal-column-two" css:theme="#main-content .col-b"/>
 <!--    
     <replace css:content="#content h1.documentFirstHeading" css:theme="#main-content h2"/>
 -->
+
     <rules if-content="not(//body[contains(concat(' ', normalize-space(@class), ' '), ' portaltype-topic')])">
-        <copy css:content="#portal-column-content" css:theme="#main-content"  />
+    <copy css:content="#parent-fieldname-description" css:theme="#main-content .col-a"/>
+    
+    <append css:content="#parent-fieldname-text" css:theme="#main-content .col-a"/>    
+        <drop css:theme=".grey-box"  />
+        
     </rules>
 
     <rules if-content="//body[contains(concat(' ', normalize-space(@class), ' '), ' portaltype-topic')]">
-        <replace css:content="#content h1.documentFirstHeading" css:theme="#main-content h2"/>
+    <copy css:content="#parent-fieldname-text" css:theme="#main-content .col-a"/>  
+        <copy css:content="#parent-fieldname-description" css:theme=".grey-box h3"/>
         
-        <replace css:content="#parent-fieldname-text" css:theme="#main-content .col-a"/>
+        <copy css:content="div#content-core" css:theme=".grey-box ul" />
         
+        <drop css:content="div#content-core div:first-child" />
+<!--html body.template-folder_listing div#visual-portal-wrapper div#portal-columns.row div#portal-column-content.cell div div#content div#content-core dl
+--><!-- 
+        <drop  css:theme=".grey-box li" />
+ -->
+
     </rules>
+
 <!--
     <replace css:theme="#steps" css:content="#portal-column-two"/>
 -->
