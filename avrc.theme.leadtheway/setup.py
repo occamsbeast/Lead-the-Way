@@ -27,7 +27,7 @@ setup(name='avrc.theme.leadtheway',
       install_requires=[
           'setuptools',
           'collective.xdv',
-
+	  'xdv>=0.4b3',
           # -*- Extra requirements: -*-
       ],
       entry_points="""

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://namespaces.plone.org/xdv" xmlns:css="http://namespaces.plone.org/xdv+css">
+
+<theme href="../themes/home.html" />
+<!--
+<theme
+    href="theme-news.html"
+    css:if-content="body.portaltype-folder"
+    />
+-->
+  <!-- Add in the Plone-created CSS and JS in addition to the static ones -->
+  <!-- Copy over the id/class attributes on the body tag, this is important
+	     for Kupu and per-section styling -->
+ 	<replace content='/html/head/title' theme='/html/head/title' />
+	<replace content='/html/head/base' theme='/html/head/base' />
+	<!-- Add in the Plone-created CSS and JS in addition to the static ones -->        
+    <drop theme="/html/head/link" />
+    <drop theme="/html/head/style" />
+    <drop theme="/html/head/script" />
+    <append  content='/html/head/meta' theme='/html/head' />
+    <append  content='/html/head/link | /html/head/style' theme='/html/head' />
+    <append  content='/html/head/script' theme='/html/head' />
+    
+    <!-- Make sure plonish styles are in place -->
+    <prepend theme="/html" content="/html/@class" />
+    <prepend theme="/html/body" content="/html/body/@class" />
+
+    <!-- Now for the content -->
+    <!-- Replace the logo with plone's -->
+   
+    <replace css:theme="a.logo" css:content="#portal-logo" />
+
+    <replace css:theme="#nav" css:content="#portal-globalnav" />
+    <prepend css:theme="" content="/html/@class" />
+    
+    <!-- Popout manifesto -->
+    
+    <copy css:content="div#portal-column-one div dl.portlet.portlet-static-lead-the-way dt.portletHeader span" css:theme="#manifesto-title"/>
+
+    <copy css:content="div#portal-column-one div dl.portlet.portlet-static-lead-the-way dd.portletItem p" css:theme="#manifesto-content"/>
+    
+    <copy css:content="div#portal-column-one div dl.portlet.portlet-static-lead-the-way dd.portletFooter span" css:theme="#manifesto-schedule"/>
+    
+    <replace css:content="#content h1.documentFirstHeading" css:theme="#main-content h2"/>
+
+    <replace css:theme="#steps" css:content="#portal-column-two"/>
+<!-- 
+
+  <drop theme="//*[@lang='en']" if-content="/html[@lang!='en']" />;
+  <drop theme="//*[@lang='es']" if-content="/html[@lang!='es']" />;
+
+  <replace content="//*[@id=&quot;portal-column-two&quot;]/div[9]/div[1]/" css:theme="#content h2"/>
+
+
+  <replace content="//*[@id=&quot;portal-column-two&quot;]/div[1]/div[1]/p" css:theme="#stop-by-text" if-content="/html[@lang='en']"/>
+  <replace content="//*[@id=&quot;portal-column-two&quot;]/div[2]/div[1]/p" css:theme="#say-hi-text" if-content="/html[@lang='en']"/>
+  <replace content="//*[@id=&quot;portal-column-two&quot;]/div[3]/div[1]/p" css:theme="#tell-others-text" if-content="/html[@lang='en']"/>
+  <replace content="//*[@id=&quot;portal-column-two&quot;]/div[4]/div[1]/p" css:theme="#learn-more-text" if-content="/html[@lang='en']"/>
+
+  <replace content="//*[@id=&quot;portal-column-two&quot;]/div[5]/div[1]/p" css:theme="#stop-by-text" if-content="/html[@lang='es']" />
+  <replace content="//*[@id=&quot;portal-column-two&quot;]/div[6]/div[1]/p" css:theme="#say-hi-text" if-content="/html[@lang='es']"/>
+  <replace content="//*[@id=&quot;portal-column-two&quot;]/div[7]/div[1]/p" css:theme="#tell-others-text" if-content="/html[@lang='es']"/>
+  <replace content="//*[@id=&quot;portal-column-two&quot;]/div[8]/div[1]/p" css:theme="#learn-more-text" if-content="/html[@lang='es']"/>
+
+  <replace css:content="#portal-siteactions" css:theme="#bar-list"/>
+ -->
+</rules>
