@@ -36,34 +36,33 @@
     
     <copy css:content="div#portal-column-one div dl.portlet.portlet-static-lead-the-way dd.portletFooter span" css:theme="#manifesto-schedule"/>
 
-     <replace css:content="#content h1.documentFirstHeading" css:theme="#main-content h2"/>
 
-    <copy css:content="#portal-column-two" css:theme="#main-content .col-b"/>
-<!--    
     <replace css:content="#content h1.documentFirstHeading" css:theme="#main-content h2"/>
--->
 
     <rules if-content="not(//body[contains(concat(' ', normalize-space(@class), ' '), ' portaltype-topic')])">
-    <copy css:content="#parent-fieldname-description" css:theme="#main-content .col-a"/>
-    
-    <append css:content="#parent-fieldname-text" css:theme="#main-content .col-a"/>    
+        <rules if-content="//*[@id='portal-column-two']">   
+            <copy css:content="#parent-fieldname-description" css:theme="#main-content .col-a"/>    
+            <append css:content="#parent-fieldname-text" css:theme="#main-content .col-a"/>      
+            <copy css:content="#portal-column-two" css:theme="#main-content .col-b"/>
+        </rules>  
+        <rules if-content="not(//*[@id='portal-column-two'])">
+            <replace css:content="#content" css:theme="#main-content"/>       
+        </rules>
         <drop css:theme=".grey-box"  />
-        
     </rules>
 
     <rules if-content="//body[contains(concat(' ', normalize-space(@class), ' '), ' portaltype-topic')]">
-    <copy css:content="#parent-fieldname-text" css:theme="#main-content .col-a"/>  
+        <rules if-content="//*[@id='portal-column-two']">   
+            <copy css:content="#parent-fieldname-text" css:theme="#main-content .col-a"/>  
+            <copy css:content="#portal-column-two" css:theme="#main-content .col-b"/>
+        </rules>
+        <rules if-content="not(//*[@id='portal-column-two'])">   
+            <replace css:content="#parent-fieldname-text" css:theme="#content .col-a"/>
+            <drop css:theme=".col-b" />
+        </rules>
         <copy css:content="#parent-fieldname-description" css:theme=".grey-box h3"/>
-        
-        <copy css:content="div#content-core" css:theme=".grey-box ul" />
-        
         <drop css:theme="div#content-core div#parent-fieldname-text" />
- -->
-<!--html body.template-folder_listing div#visual-portal-wrapper div#portal-columns.row div#portal-column-content.cell div div#content div#content-core dl
---><!-- 
-        <drop  css:theme=".grey-box li" />
- -->
-
+        <copy css:content="div#content-core" css:theme=".grey-box ul" />
     </rules>
 
 <!--
