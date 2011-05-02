@@ -29,16 +29,14 @@
 
     <replace css:theme="#nav" css:content="#portal-globalnav" />
     <!-- Popout manifesto -->
-    
     <copy css:content="div#portal-column-one div dl.portlet.portlet-static-lead-the-way dt.portletHeader span" css:theme="#manifesto-title"/>
 
     <copy css:content="div#portal-column-one div dl.portlet.portlet-static-lead-the-way dd.portletItem p" css:theme="#manifesto-content"/>
-    
+
     <copy css:content="div#portal-column-one div dl.portlet.portlet-static-lead-the-way dd.portletFooter span" css:theme="#manifesto-schedule"/>
-
-
+        
     <replace css:content="#content h1.documentFirstHeading" css:theme="#main-content h2"/>
-
+    
     <rules if-content="not(//body[contains(concat(' ', normalize-space(@class), ' '), ' portaltype-topic')])">
         <rules if-content="//*[@id='portal-column-two']">   
             <copy css:content="#parent-fieldname-description" css:theme="#main-content .col-a"/>    
@@ -46,7 +44,7 @@
             <copy css:content="#portal-column-two" css:theme="#main-content .col-b"/>
         </rules>  
         <rules if-content="not(//*[@id='portal-column-two'])">
-            <replace css:content="#content" css:theme="#main-content"/>       
+            <replace css:content="#content" css:theme="#content"/>       
         </rules>
         <drop css:theme=".grey-box"  />
     </rules>
@@ -63,8 +61,30 @@
         <copy css:content="#parent-fieldname-description" css:theme=".grey-box h3"/>
         <drop css:theme="div#content-core div#parent-fieldname-text" />
         <copy css:content="div#content-core" css:theme=".grey-box ul" />
+<!-- 
+    </rules>
+ -->
     </rules>
 
+    <rules if-content="//body[contains(concat(' ', normalize-space(@class), ' '), 'template-manage-portlets')]">
+        <replace css:theme="#main-content" css:content="#portal-columns" />
+    </rules>
+    <rules if-content="//*[@class='documentEditable']">
+    	<rules if-content="//li[@id='contentview-view'][contains(@class,'selected')]">
+            <prepend css:theme="#main-content" css:content="#edit-bar" css:if-content="#edit-bar" />    	    
+    	</rules>
+    	<rules if-content="not(//li[@id='contentview-view'][contains(@class,'selected')])">
+            <replace css:theme="#main-content" css:content=".documentEditable" />
+
+    	</rules>
+    </rules>
+    <copy css:content="#portal-siteactions" css:theme="#bar" />
+    
+<!--    
+
+//
+	//li[@id="contentview-view"][contains(@class,'foo')] 
+ -->
 <!--
     <replace css:theme="#steps" css:content="#portal-column-two"/>
 -->
